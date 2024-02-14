@@ -1,0 +1,90 @@
+// -------------------------------------------- Movie Cards --------------------------------------------
+
+.movie-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25rem;
+}
+
+.card-back-content {
+  position: relative;
+}
+
+.movie-card-background {
+  position: absolute;
+  background-color: black;
+  margin: -32px;
+  height: 100%;
+  border-radius: 20px;
+  width: inherit;
+  filter: blur(20px);
+}
+
+.movie-card-background img {
+  overflow: hidden;
+}
+
+.movie-poster img {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.movie-poster {
+    height: 100%;
+}
+
+.movie-card {
+    perspective: 150rem;
+    position: relative;
+    height: 35rem;
+    max-width: 370px;
+    margin: 2rem;
+    box-shadow: none;
+    background: none;
+    width: 30rem;
+  }
+  
+  .movie-card-side {
+    height: 35rem;
+    border-radius: 20px;
+    transition: all 1s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+  }
+  
+  .movie-card-side.back {
+    transform: rotateY(-180deg);
+    overflow-y: scroll;
+    background-color: transparent;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; ;
+    overflow: hidden;
+  }
+  
+  .movie-card-side.front {
+    padding: 0 !important;
+    background-color: transparent;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+  }
+  
+  .movie-card:hover .movie-card-side.front {
+    transform: rotateY(180deg);
+  }
+  
+  .movie-card:hover .movie-card-side.back {
+    transform: rotateY(0deg);
+  }
+
+// -------------------------------------------- Individual Movies --------------------------------------------
+ #movie-4, #movie-8, #movie-10, #movie-19{
+  color: black;
+ }

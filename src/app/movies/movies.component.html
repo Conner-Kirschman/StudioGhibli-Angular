@@ -1,0 +1,24 @@
+<div class="movie-cards">
+    <div *ngFor="let movie of movies">
+        <div class="movie-card">
+            <div class="movie-card-side front">
+                <div class="movie-poster">
+                    <img src="{{movie.imageUrl}}" alt="{{movie.title}}" style="width: 100%; height: 100%;">
+                </div>
+            </div>
+            <div class="movie-card-side back">
+                <div class="movie-card-background">
+                    <img src="{{movie.imageUrl}}" alt="{{movie.title}}" style="width: 100%; height: 100%; border-radius: 20px;">
+                </div>
+                <div class="card-back-content" id="movie-{{movie.id}}">
+                    <h1> {{movie.title}} </h1>
+                    <p>Director: {{movie.director}}</p>
+                    <p>Producer: {{movie.producer}}</p>
+                    <p>Length: {{movie.length}}</p>
+                    <p>Release Date: {{movie.releaseDate}}</p>
+                    <p>Description: {{movie.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
